@@ -1,1 +1,1 @@
-worker: python CYM Bot.py
+worker: python CYMBot.py
