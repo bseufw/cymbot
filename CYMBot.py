@@ -5,6 +5,8 @@ import time
 import threading
 import asyncio
 
+CYM_TOKEN = 'OTIyNjQzMjgzNTMwODg3MTk5.YcEchA.'+'4-l7Cui77FhhDoVH2CH0PnuNWUY'
+
 client = discord.Client()
 colour_channel_id = 922191375389294632
 test_channel_id = 928724975098159115
@@ -72,4 +74,4 @@ async def on_reaction_add(reaction, user):
         print('Role not defined')
 
 
-client.run('OTIyNjQzMjgzNTMwODg3MTk5.YcEchA.4-l7Cui77FhhDoVH2CH0PnuNWUY')
+client.run(CYM_TOKEN)
