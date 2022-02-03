@@ -47,9 +47,9 @@ async def on_ready():
     channel = client.get_channel(role_channel_id)
 
     # <@&{ROLE_ID}> , format for pinging a role
-    await channel.send('Now you can express yourself on our CYM Community Server! React to give yourself the roles you like. \n\n**__REACT BELOW FOR PERSONAL PRONOUNS!__**\n\n> 🥦 <@&{0}>\n> 🌵 <@&{1}>\n> 🌴 <@&{2}>\n> 🌿 <@&{3}>\n> 🍁 <@&{4}>\n> 🌲 <@&{5}>\n> 🍄 <@&{6}>\n> 🌳 <@&{7}>'.format(i_me_id, you_you_id, he_him_id, she_her_id, we_us_id, they_them_id, it_its_id, other_ask_id))
+    # await channel.send('Now you can express yourself on our CYM Community Server! React to give yourself the roles you like. \n\n**__REACT BELOW FOR PERSONAL PRONOUNS!__**\n\n> 🥦 <@&{0}>\n> 🌵 <@&{1}>\n> 🌴 <@&{2}>\n> 🌿 <@&{3}>\n> 🍁 <@&{4}>\n> 🌲 <@&{5}>\n> 🍄 <@&{6}>\n> 🌳 <@&{7}>'.format(i_me_id, you_you_id, he_him_id, she_her_id, we_us_id, they_them_id, it_its_id, other_ask_id))
 
-    await channel.send('**__REACT BELOW FOR MORE ROLES__** \n\n> 🎼 <@&{0}>\n> <:weeb:928834166752182353> <@&{1}>\n> <:just_guy_with_pink_hair:928838500047007795> <@&{2}>\n> <a:sus:928840698852151317> <@&{3}>\n> 🚁 <@&{4}>\n> 🐶 <@&{5}>\n> 😼 <@&{6}>'.format('928000441680269342', '928000478992805969', '928001159698997329', '928756573554241586', '928070865894141994', '928756417010221066', '928756533372813312'))
+    # await channel.send('**__REACT BELOW FOR MORE ROLES__** \n\n> 🎼 <@&{0}>\n> <:weeb:928834166752182353> <@&{1}>\n> <:just_guy_with_pink_hair:928838500047007795> <@&{2}>\n> <a:sus:928840698852151317> <@&{3}>\n> 🚁 <@&{4}>\n> 🐶 <@&{5}>\n> 😼 <@&{6}>'.format('928000441680269342', '928000478992805969', '928001159698997329', '928756573554241586', '928070865894141994', '928756417010221066', '928756533372813312'))
 
     # open function returns a file object you use o read text from a text file
     note = open('D:/stuff/cym.txt', 'r')
@@ -64,14 +64,15 @@ async def on_ready():
 @client.event
 # MAKE SURE THE BOT HIARCHY IS ABOVE THE ROLES
 async def on_reaction_add(reaction, user):
-    emoji = str(reaction.emoji)
-    role = Dict.get(emoji)
-    if (role != None):
-        role = discord.utils.get(user.guild.roles, name=role)
-        print('Role added to')
-        await user.add_roles(role)
-    else:
-        print('Role not defined')
+    if(reaction.message.id == 937205061057130547 or reaction.message.id == 937205069651251211):
+        emoji = str(reaction.emoji)
+        role = Dict.get(emoji)
+        if (role != None):
+            role = discord.utils.get(user.guild.roles, name=role)
+            print('Role added to')
+            await user.add_roles(role)
+        else:
+            print('Role not defined')
 
 
 client.run(CYM_TOKEN)
