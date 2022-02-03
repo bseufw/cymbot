@@ -43,7 +43,7 @@ cat_id = '928756533372813312'
 
 @client.event
 async def on_ready():
-    print('Bot is online')
+    print('Bot is online 10:40 Feb 2 2022')
     channel = client.get_channel(role_channel_id)
 
     # <@&{ROLE_ID}> , format for pinging a role
@@ -52,12 +52,12 @@ async def on_ready():
     # await channel.send('**__REACT BELOW FOR MORE ROLES__** \n\n> 🎼 <@&{0}>\n> <:weeb:928834166752182353> <@&{1}>\n> <:just_guy_with_pink_hair:928838500047007795> <@&{2}>\n> <a:sus:928840698852151317> <@&{3}>\n> 🚁 <@&{4}>\n> 🐶 <@&{5}>\n> 😼 <@&{6}>'.format('928000441680269342', '928000478992805969', '928001159698997329', '928756573554241586', '928070865894141994', '928756417010221066', '928756533372813312'))
 
     # open function returns a file object you use o read text from a text file
-    note = open('D:/stuff/cym.txt', 'r')
-    rules = note.read()
+    #note = open('D:/stuff/cym.txt', 'r')
+    #rules = note.read()
 
-    channel_rules = client.get_channel(rule_channel_id)
-    await channel_rules.send(rules)
-    note.close()  # closes file
+    #channel_rules = client.get_channel(rule_channel_id)
+    # await channel_rules.send(rules)
+    # note.close()  # closes file
 
 
 # Event handler for reactions from user
