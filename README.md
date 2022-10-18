@@ -1,2 +1,3 @@
 # cymbot
-Discord bot for CYM community sesrver
+Discord bot for CYM community server
+
