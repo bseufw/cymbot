@@ -15,7 +15,7 @@ weeb_emoji = '<:weeb:928834166752182353>'
 kboo_emoji = '<:just_guy_with_pink_hair:928838500047007795>'
 sus_emoji = '<a:sus:928840698852151317>'
 
-Dict = {'🌴': 'he/him', '🌿': 'she/her', 
+Dict = {'🌴': 'he/him', '🌿': 'she/her',
         '🌲': 'they/them', '🌳': 'other/ask',
         '🎼': 'musician', weeb_emoji: 'weeb', kboo_emoji: 'K-boo', '🐶': 'Dog', '😼': 'Cat', '🎮': 'Gamer'}
 
@@ -42,7 +42,7 @@ async def on_ready():
 
     await channel.send('**__REACT BELOW FOR MORE ROLES__** \n\n> 🎼 <@&{0}>\n> <:weeb:928834166752182353> <@&{1}>\n> <:just_guy_with_pink_hair:928838500047007795> <@&{2}>\n> <a:sus:928840698852151317> <@&{3}>\n> 🚁 <@&{4}>\n> 🐶 <@&{5}>\n> 😼 <@&{6}>'.format('928000441680269342', '928000478992805969', '928001159698997329', '928756573554241586', '928070865894141994', '928756417010221066', '928756533372813312'))
 
-    #open function returns a file object you use o read text from a text file
+    # open function returns a file object you use o read text from a text file
     note = open('D:/stuff/cym.txt', 'r')
     rules = note.read()
 
@@ -55,7 +55,7 @@ async def on_ready():
 @client.event
 # MAKE SURE THE BOT HIARCHY IS ABOVE THE ROLES
 async def on_reaction_add(reaction, user):
-    if(reaction.message.id == 937205061057130547 or reaction.message.id == 937205069651251211):
+    if (reaction.message.id == 937205061057130547 or reaction.message.id == 937205069651251211):
         emoji = str(reaction.emoji)
         role = Dict.get(emoji)
         if (role != None):
